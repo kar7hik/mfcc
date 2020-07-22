@@ -1,0 +1,12 @@
+*.fasl
+*.falsl
+*.dx64fsl
+.\#*
+\#*
+*~
+*.txt
+*.tex
+*.py
+scratchpad.lisp
+
+
