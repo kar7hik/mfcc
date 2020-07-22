@@ -1,6 +1,5 @@
 (in-package #:mfcc)
 
-
 (defun range-helper (start stop step)
   (iter
     (for i :from start :to stop :by step)
