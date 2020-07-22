@@ -1,6 +1,6 @@
 # Implementation of Mel Frequency Cepstrum Coefficient
 
-[MFCC](https://www.wikiwand.com/en/Mel-frequency_cepstrum)  are the most often used features for Automatic Speech Recognition (ASR). This project is a pure common-lisp implementation of MFCC. For more details and understand the steps involved in the computation of MFCC, refer the [doc](./doc/) folder.
+[MFCC](https://www.wikiwand.com/en/Mel-frequency_cepstrum)  are the most often used features in Automatic Speech Recognition (ASR). This project is a pure common-lisp implementation of MFCC. For more details and to understand the steps involved in the computation of MFCC, refer the [doc](./doc/) folder.
 
 
 ## Usage:
