@@ -3,6 +3,11 @@
 
 [[https://www.wikiwand.com/en/Mel-frequency_cepstrum][MFCC]] are the most often used features in Automatic Speech Recognition (ASR). This project is a pure common-lisp implementation of MFCC. For more details and to understand the steps involved in the computation of MFCC, refer the [[./doc][doc]] folder.
 
+** Block diagram of MFCC
+#+CAPTION: MFCC block-diagram
+#+NAME:   fig: 1
+[[./data/mfcc.png]]
+
 ** Features
 - Read/Write WAV Files
 - Play WAV Files
@@ -53,7 +58,7 @@
 
 *** Generated Signal
 #+CAPTION: Geneated Sine Wave.
-#+NAME:   fig: 1
+#+NAME:   fig: 2
 [[./data/sine-example.png]]
 
 *** To cut the audio-signal for the specified time (seconds)
@@ -73,16 +78,23 @@
 #+END_SRC
 
 
-*** Create a MFCC object to obtain the feature values: 
+*** Creating a MFCC object: 
 #+BEGIN_SRC common-lisp
 (defparameter *mfcc-obj* (make-mfcc *sig*))
+#+END_SRC
+**** Triangular Windows (Mel-Scale)
+#+CAPTION: Triangular Windows (Mel-Scale)
+#+NAME:   fig: 2
+[[./data/mfcc-filter-scale.png]]
+
+***  Obtaining Features Values:
+#+BEGIN_SRC common-lisp
 (defparameter *lift* (apply-liftering-to-dct *mfcc-obj*))
 (defparameter *log-mean* (get-mean-normalization (log-mel-features *mfcc-obj*)))
 (defparameter *mfcc-mean* (get-mean-normalization *lift*))
 (defparameter *final* (delta *lift* 2))
 (defparameter *energy* (find-energy (power-spectrum *sig*)))
 #+END_SRC
-
 
 ** Results:
 *** MFCC feature (only the first feature vector):
