@@ -19,6 +19,13 @@
 - Energy
 
 ** Usage:
+*** Loading:
+Clone this repo or extract the downloaded zip file into the quicklisp local-project directory. This project also depends on the [[https://github.com/kar7hik/cl-dct][cl-dct]].
+
+#+BEGIN_SRC common-lisp
+(ql:quickload :mfcc)
+(in-package :mfcc)
+#+END_SRC
 *** Record audio:
 #+BEGIN_SRC common-lisp
 (record-audio :record-time 2
