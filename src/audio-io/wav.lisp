@@ -81,7 +81,7 @@
   (let* ((header (make-wave-header (length sample-data)
                                    :sample-rate  sample-rate
                                    :num-channels num-channels))
-         (file (create-file-path filename))
+         (file (create-data-file-path filename))
          ;; Sample multiplier value taken from
          ;; https://www3.nd.edu/~dthain/courses/cse20211/fall2013/wavfile/example.c
          (bytes nil)

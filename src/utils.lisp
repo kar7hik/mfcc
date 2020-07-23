@@ -18,6 +18,12 @@
   (merge-pathnames filename
                    *current-directory*))
 
+(defun create-data-file-path (filename)
+  "Creates a file path from the filename."
+  (merge-pathnames
+   (merge-pathnames filename *data-directory*)
+                   *current-directory*))
+
 
 (defun coerce-sequence (seq conversion-type)
   (iter
@@ -121,7 +127,7 @@
 
 (defun save-2d-array-to-file (filename array)
   (with-open-file (fstream
-                   (create-file-path filename)
+                   (create-data-file-path filename)
                    :direction :output
                    :if-exists :supersede)
     (let ((rows (get-row array))

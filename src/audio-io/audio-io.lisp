@@ -225,7 +225,6 @@
               :plot-filename "record-plot.png")
 
 
-;;FIXME: The load wav has been modified.
 (defun play-wav-audio (filename)
   "Function to play WAV file."
   (let* ((wav-file (load-wav-file filename :verbose t))
@@ -264,11 +263,6 @@
           (incf idx buffer-len))))))
 
 
-
-
-;; (play-wav-audio "/home/karthik/quicklisp/local-projects/signal/music-mono.wav")
-
-
 ;;; Wave Generate - User API
 (defun generate-wave-data (wave &key (with-time t)
                                   (data-size +audio-buffer-size+))
@@ -298,20 +292,21 @@
                            (save-to-file nil) (filename nil))
   (let ((buffer (generate-wave-data wave)))
     (when plot-data
-      (plot-signal buffer plot-filename 'normal))
+      (plot-signal buffer plot-filename))
     (when save-to-file
       (save-as-wav-file buffer filename))))
 
 
 ;;; For testing
+#+test
 (defparameter *wave* (make-instance 'wave-from-function
-                                    :duration *seconds*
-                                    :frequency *frequency*
+                                    :duration 1.0
+                                    :frequency 5
                                     :num-channels *num-channels*))
 
 #+test
 (create-wave *wave*
-             :plot-data nil
+             :plot-data t
              :plot-filename "sine-example.png"
              :save-to-file t
              :filename "low-freq.wav")

@@ -13,7 +13,7 @@
 ;;; Global Variables
 (defparameter *sample-rate* 44100d0
   "Default audio sample rate.")
-(defparameter *seconds* 5
+(defparameter *seconds* 1
   "Default time period")
 (defparameter *sample-interval* 1
   "Default time interval.")
@@ -27,7 +27,9 @@
 
 
 (defparameter *project-name* "mfcc/")
+(defparameter *data-directory* "data/")
 (defparameter *local-working-directory* (merge-pathnames *project-name*
                                                          "quicklisp/local-projects/"))
+
 (defparameter *current-directory* (merge-pathnames *local-working-directory*
                                                    (user-homedir-pathname)))

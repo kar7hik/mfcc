@@ -190,7 +190,7 @@
     (vgplot:title title)
     (when linespace-supplied-p
       (vgplot:axis linespace))
-    (vgplot:print-plot (create-file-path filename))
+    (vgplot:print-plot (create-data-file-path filename))
     (vgplot:format-plot t "set terminal ~A" "qt"))
   'SAVED)
 
@@ -220,7 +220,7 @@
 (defun save-to-file (filename samples)
   "Creates a File with sample data."
   (with-open-file (fstream
-                   (create-file-path filename)
+                   (create-data-file-path filename)
                    :direction :output
                    :if-exists :supersede)
     (iter
@@ -307,5 +307,4 @@
   "Returns the audio length based on the audio type. Stereo audio-data is a 2D array containing left and right channel values. For mono, it is simply 1D array."
   (* (car (array-dimensions audio-data))
      num-channels))
-
 

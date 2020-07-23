@@ -236,9 +236,7 @@
   (set-dct-mel-features mfcc-obj))
 
 
-(defparameter *wav-file* "/home/karthik/quicklisp/local-projects/signal/music-mono-1.wav")
-;; (defparameter *wav-file* "/home/karthik/quicklisp/local-projects/signal/music-mono.wav")
-;; (defparameter *wav-file* "/home/karthik/quicklisp/local-projects/signal/music-stereo.wav")
+(defparameter *wav-file* "./data/music-mono-1.wav")
 
 ;; (time (defparameter *wav* (load-wav-file *wav-file*)))
 ;; ;;; ;TODO: chunk-audio-data
