@@ -52,7 +52,9 @@
 #+END_SRC
 
 *** Generated Signal
-[[./data/sine-example.png][sine-wave]]
+#+CAPTION: Geneated Sine Wave.
+#+NAME:   fig: 1
+[[./data/sine-example.png]]
 
 *** To cut the audio-signal for the specified time (seconds)
 #+BEGIN_SRC common-lisp
