@@ -181,12 +181,9 @@
 #+END_SRC
 
 ** Reference:
-[1]. Spoken Language Processing: A Guide to Theory, Algorithm and System Devel-
-opment
-[2]. [[https://www.gaussianwaves.com/2013/12/power-and-energy-of-a-signal/][Power and Energy of a Signal]]
-[3]. [[http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral][Practical cryptography blog-post]]
-[4]. Audio Processing and Speech Recognition Concepts, Techniques and Research
-Overviews by Soumya Sen, Anjan Dutta, Nilanjan Dey
-[5]. [[https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html][Speech-processing-for-machine-learning]]
-[6]. [[https://archive.org/details/SpectrogramCepstrumAndMel-frequency_636522][Archive video about MFCC]]
-
+1. Spoken Language Processing: A Guide to Theory, Algorithm and System Development
+2. [[https://www.gaussianwaves.com/2013/12/power-and-energy-of-a-signal/][Power and Energy of a Signal]]
+3. [[http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral][Practical cryptography blog-post]]
+4. Audio Processing and Speech Recognition Concepts, Techniques and Research Overviews by Soumya Sen, Anjan Dutta, Nilanjan Dey
+5. [[https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html][Speech-processing-for-machine-learning]]
+6. [[https://archive.org/details/SpectrogramCepstrumAndMel-frequency_636522][Archive video about MFCC]]
